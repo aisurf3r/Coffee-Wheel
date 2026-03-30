@@ -105,4 +105,4 @@ Accesibilidad: Soporte nativo para reduceMotion, reduciendo las vueltas y la dur
 Este proyecto está bajo la Licencia **MIT**. Eres libre de usarlo, modificarlo y distribuirlo (bajo tu propio riesgo económico si te toca pagar el café).
 
 ---
-**Desarrollado para mantener la paz (y la cafeína) en el equipo.** by Aisurf3r
+**Desarrollado para mantener la paz (y la cafeína) en el equipo.** Made with ❤️ by @aisurf3r
