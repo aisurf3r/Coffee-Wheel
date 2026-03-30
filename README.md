@@ -8,6 +8,18 @@
 
 ---
 
+<img width="1131" height="874" alt="{DC132C36-9F34-4B20-BE4C-C99A60E3E9FB}" src="https://github.com/user-attachments/assets/7eb16b80-9935-4f31-8372-ed8c024678da" />
+
+
+<img width="1196" height="820" alt="{C688B4DF-92E5-4558-A485-21FA319D62FC}" src="https://github.com/user-attachments/assets/650c525a-e3b1-41e2-afca-3a7481a557d0" />
+
+
+<img width="1086" height="779" alt="{D35BD62E-D529-4E05-B419-8869A1E7152E}" src="https://github.com/user-attachments/assets/a8884fc8-94b6-4536-b77b-40ff230a8c98" />
+
+
+
+
+
 ## 🎯 Propósito del Proyecto
 Olvídate de las discusiones sobre quién pagó la última vez. Esta aplicación utiliza un motor de rotación aleatoria para elegir a una "víctima" entre los nombres introducidos. Es la solución ideal para equipos que buscan transparencia y un toque de emoción antes del break.
 
@@ -17,12 +29,14 @@ Olvídate de las discusiones sobre quién pagó la última vez. Esta aplicación
 * **Animación de Giro Realista:** Implementada con una desaceleración (easing) orgánica para aumentar el suspense.
 * **UI Moderno:** Interfaz limpia, oscura y *mobile-first* construida con Tailwind CSS.
 * **Efecto Ganador:** Notificación visual inmediata del nombre seleccionado tras el frenado de la ruleta.
-
+* Historial de ganadores pasados
+* Reducción de tiempo de animación de movimiento de giro de ruleta
+* Disponible en Español o Inglés
 ---
 
 ## 🛠️ Stack Técnico
 
-* **Framework:** React 18 (Vite as Build Tool).
+* **Framework:** React 18 (Vite).
 * **Styling:** Tailwind CSS (Diseño responsivo y utilitario).
 * **Iconos:** Lucide React.
 * **Despliegue:** Optimizado para Vercel.
@@ -91,4 +105,4 @@ Accesibilidad: Soporte nativo para reduceMotion, reduciendo las vueltas y la dur
 Este proyecto está bajo la Licencia **MIT**. Eres libre de usarlo, modificarlo y distribuirlo (bajo tu propio riesgo económico si te toca pagar el café).
 
 ---
-**Desarrollado para mantener la paz (y la cafeína) en el equipo.**
+**Desarrollado para mantener la paz (y la cafeína) en el equipo.** by Aisurf3r
