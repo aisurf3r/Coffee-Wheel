@@ -98,7 +98,7 @@ export function NameInput({ participants, onParticipantsChange, onStartSpin, lan
           <label htmlFor="nameInput" className="block text-sm font-semibold text-gray-700 mb-2">
             {getTranslation(language, 'addParticipant')}
           </label>
-          <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row gap-2">
             <input
               id="nameInput"
               type="text"
@@ -114,7 +114,7 @@ export function NameInput({ participants, onParticipantsChange, onStartSpin, lan
             <button
               onClick={handleAddParticipant}
               disabled={!inputValue.trim() || participants.length >= 12}
-              className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
+              className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2 sm:w-auto w-full"
               aria-label={getTranslation(language, 'addButton')}
             >
               <Plus size={20} />
