@@ -59,13 +59,17 @@ export function NameInput({ participants, onParticipantsChange, onStartSpin, lan
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-400 via-pink-400 to-purple-500 flex items-center justify-center p-4 relative overflow-hidden">
-      <svg className="absolute inset-0 w-full h-full opacity-20 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-full h-full opacity-15 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <pattern id="stars-input" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-            <polygon points="40,10 50,35 75,35 55,50 65,75 40,60 15,75 25,50 5,35 30,35" fill="rgba(255,255,255,0.4)"/>
+          <pattern id="coffee-cups-input" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+            <g fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1">
+              <path d="M 35,40 Q 30,40 30,50 L 30,70 Q 30,80 40,80 L 60,80 Q 70,80 70,70 L 70,50 Q 70,40 65,40 Z"/>
+              <path d="M 70,55 Q 75,55 80,60 Q 85,65 85,70 Q 80,75 75,75 Q 70,75 70,70"/>
+              <ellipse cx="50" cy="40" rx="15" ry="3"/>
+            </g>
           </pattern>
         </defs>
-        <rect width="100%" height="100%" fill="url(#stars-input)"/>
+        <rect width="100%" height="100%" fill="url(#coffee-cups-input)"/>
       </svg>
       <div className="bg-white rounded-3xl shadow-2xl p-8 max-w-lg w-full relative z-10">
         <div className="text-center mb-8">
