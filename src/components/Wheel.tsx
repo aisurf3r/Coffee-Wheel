@@ -107,24 +107,30 @@ export function Wheel({ participants, winner, onSpinComplete, reduceMotion, lang
     ctx.stroke();
   }, [participants]);
 
+  const canvasSize = typeof window !== 'undefined' && window.innerWidth < 420 ? 280 : 400;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4 relative overflow-hidden">
-      <svg className="absolute inset-0 w-full h-full opacity-20 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-full h-full opacity-15 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <pattern id="diamonds-wheel" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-            <polygon points="50,10 90,50 50,90 10,50" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5"/>
+          <pattern id="coffee-cups-wheel" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+            <g fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1">
+              <path d="M 35,40 Q 30,40 30,50 L 30,70 Q 30,80 40,80 L 60,80 Q 70,80 70,70 L 70,50 Q 70,40 65,40 Z"/>
+              <path d="M 70,55 Q 75,55 80,60 Q 85,65 85,70 Q 80,75 75,75 Q 70,75 70,70"/>
+              <ellipse cx="50" cy="40" rx="15" ry="3"/>
+            </g>
           </pattern>
         </defs>
-        <rect width="100%" height="100%" fill="url(#diamonds-wheel)"/>
+        <rect width="100%" height="100%" fill="url(#coffee-cups-wheel)"/>
       </svg>
       <div className="text-center relative z-10">
-        <h2 className="text-4xl font-bold text-white mb-8 animate-pulse">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 animate-pulse">
           {getTranslation(language, 'spinning')}
         </h2>
 
         <div className="relative inline-block">
-          <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 z-10">
-            <div className="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[40px] border-t-yellow-400 drop-shadow-lg" />
+          <div className="absolute -top-8 sm:-top-12 left-1/2 transform -translate-x-1/2 z-10">
+            <div className="w-0 h-0 border-l-[15px] sm:border-l-[20px] border-l-transparent border-r-[15px] sm:border-r-[20px] border-r-transparent border-t-[30px] sm:border-t-[40px] border-t-yellow-400 drop-shadow-lg" />
           </div>
 
           <div
@@ -136,14 +142,14 @@ export function Wheel({ participants, winner, onSpinComplete, reduceMotion, lang
           >
             <canvas
               ref={canvasRef}
-              width={400}
-              height={400}
+              width={canvasSize}
+              height={canvasSize}
               className="drop-shadow-2xl"
             />
           </div>
         </div>
 
-        <p className="text-white text-xl mt-8 font-semibold">
+        <p className="text-white text-lg sm:text-xl mt-8 font-semibold">
           {getTranslation(language, 'spinningText')} 🤔
         </p>
       </div>
