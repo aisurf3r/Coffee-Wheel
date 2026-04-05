@@ -47,15 +47,18 @@ export function Winner({ winner, onRestart, onNewRound, language }: WinnerProps)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-400 via-blue-400 to-purple-500 flex items-center justify-center p-4 relative overflow-hidden">
-      <svg className="absolute inset-0 w-full h-full opacity-20 pointer-events-none z-0" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-full h-full opacity-15 pointer-events-none z-0" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <pattern id="sparkles-winner" x="0" y="0" width="90" height="90" patternUnits="userSpaceOnUse">
-            <polygon points="45,15 50,30 65,35 50,40 45,55 40,40 25,35 40,30" fill="rgba(255,255,255,0.4)"/>
+          <pattern id="coffee-cups-winner" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+            <g fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1">
+              <path d="M 35,40 Q 30,40 30,50 L 30,70 Q 30,80 40,80 L 60,80 Q 70,80 70,70 L 70,50 Q 70,40 65,40 Z"/>
+              <path d="M 70,55 Q 75,55 80,60 Q 85,65 85,70 Q 80,75 75,75 Q 70,75 70,70"/>
+              <ellipse cx="50" cy="40" rx="15" ry="3"/>
+            </g>
           </pattern>
         </defs>
-        <rect width="100%" height="100%" fill="url(#sparkles-winner)"/>
+        <rect width="100%" height="100%" fill="url(#coffee-cups-winner)"/>
       </svg>
-
       {confetti.map((conf) => (
         <div
           key={conf.id}
